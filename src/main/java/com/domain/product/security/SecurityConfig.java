@@ -18,7 +18,8 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(
                         https -> https
-                                .anyRequest().permitAll()
+                                .requestMatchers("/catalogues/**").hasRole("ADMIN")
+                                .anyRequest().authenticated()
                 )
                 .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
                 .csrf(AbstractHttpConfigurer::disable);
