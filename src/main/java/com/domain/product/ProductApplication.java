@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
-@SpringBootApplication(scanBasePackages = {"com.domain.product","com.domain.authcommon"})
+@SpringBootApplication(scanBasePackages = {"com.domain.product","com.domain.authcommon", "com.domain.cryptography"})
 public class ProductApplication {
 
     public static void main(String[] args) {
